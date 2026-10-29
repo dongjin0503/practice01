@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
 
 
-const Delete = ({ setStocks }) => {
+const Delete4 = ({ setStocks }) => {
 
     const navi = useNavigate();
     const [delTarget, setDelTarget] = useState("");
@@ -25,4 +25,4 @@ const Delete = ({ setStocks }) => {
     );
 }
 
-export default Delete;
+export default Delete4;

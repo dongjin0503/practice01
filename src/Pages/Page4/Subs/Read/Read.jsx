@@ -1,6 +1,6 @@
 import styles from 'Read.module.css'
 
-const Read = ({ stocks }) => {
+const Read4 = ({ stocks }) => {
 
     return (
         <div className={styles.body}>
@@ -32,4 +32,4 @@ const Read = ({ stocks }) => {
     );
 }
 
-export default Read;
+export default Read4;

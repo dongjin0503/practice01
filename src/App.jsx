@@ -2,10 +2,30 @@ import { useState } from 'react'
 import { Routes, Route, Link, Outlet, useNavigate } from 'react-router-dom'
 import System from './System/System';
 import Page1 from './Pages/Page1/Page1';
+
 import Page2 from './Pages/Page2/Page2';
+import Create2 from './Pages/Page2/Subs/Create/Create';
+import Read2 from './Pages/Page2/Subs/Read/Read';
+import Update2 from './Pages/Page2/Subs/Update/Update';
+import Delete2 from './Pages/Page2/Subs/Delete/Delete';
+
 import Page3 from './Pages/Page3/Page3';
+import Create3 from './Pages/Page3/Subs/Create/Create';
+import Read3 from './Pages/Page3/Subs/Read/Read';
+import Update3 from './Pages/Page3/Subs/Update/Update';
+import Delete3 from './Pages/Page3/Subs/Delete/Delete';
+
 import Page4 from './Pages/Page4/Page4';
+import Create4 from './Pages/Page4/Subs/Create/Create';
+import Read4 from './Pages/Page4/Subs/Read/Read';
+import Update4 from './Pages/Page4/Subs/Update/Update';
+import Delete4 from './Pages/Page4/Subs/Delete/Delete';
+
 import Page5 from './Pages/Page5/Page5';
+import Create5 from './Pages/Page5/Subs/Create/Create';
+import Read5 from './Pages/Page5/Subs/Read/Read';
+import Update5 from './Pages/Page5/Subs/Update/Update';
+import Delete5 from './Pages/Page5/Subs/Delete/Delete';
 
 
 function App() {
@@ -53,18 +73,18 @@ function App() {
           <Route path="delete" element={<Delete menus={menus} setMenus={setMenus}/>}></Route>
         </Route>
         <Route path="page3" element={<Page3 />}>
-          <Route index element={<Read menus={menus} />}></Route>
-          <Route path="read" element={<Read menus={menus} />}></Route>
-          <Route path="create" element={<Create setMenus={setMenus} />}></Route>
-          <Route path="update" element={<Update setMenus={setMenus} />}></Route>
-          <Route path="delete" element={<Delete setMenus={setMenus} />}></Route>
+          <Route index element={<Read3 menus={menus} />}></Route>
+          <Route path="read" element={<Read3 menus={menus} />}></Route>
+          <Route path="create" element={<Create3 setMenus={setMenus} />}></Route>
+          <Route path="update" element={<Update3 setMenus={setMenus} />}></Route>
+          <Route path="delete" element={<Delete3 setMenus={setMenus} />}></Route>
         </Route>
         <Route path="page4" element={<Page4 />}>
-          <Route index element={<Read stocks={stocks} />}></Route>
-          <Route path="read" element={<Read stocks={stocks} />}></Route>
-          <Route path="create" element={<Create setStocks={setStocks} />}></Route>
-          <Route path="update" element={<Update setStocks={setStocks} />}></Route>
-          <Route path="delete" element={<Delete setStocks={setStocks} />}></Route>
+          <Route index element={<Read4 stocks={stocks} />}></Route>
+          <Route path="read" element={<Read4 stocks={stocks} />}></Route>
+          <Route path="create" element={<Create4 setStocks={setStocks} />}></Route>
+          <Route path="update" element={<Update4 setStocks={setStocks} />}></Route>
+          <Route path="delete" element={<Delete4 setStocks={setStocks} />}></Route>
         </Route>
         <Route path="page5" element={<Page5 />}>
           <Route index element={<Read />}></Route>

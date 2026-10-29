@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
 
-const Update = ({ setMenus }) => {
+const Update3 = ({ setMenus }) => {
 
     const navi = useNavigate();
 
@@ -35,4 +35,4 @@ const Update = ({ setMenus }) => {
     );
 }
 
-export default Update;
+export default Update3;
