@@ -2,7 +2,7 @@ import styles from 'Create.module.css'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
 
-const Create = ({ setStocks }) => {
+const Create4 = ({ setStocks }) => {
 
     const navi = useNavigate();
 
@@ -33,4 +33,4 @@ const Create = ({ setStocks }) => {
         </div>
     );
 }
-export default Create;
+export default Create4;
