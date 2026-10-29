@@ -1,6 +1,12 @@
 import { useState } from 'react'
 import './App.css'
 import { Routes, Route, Link, Outlet, useNavigate } from 'react-router-dom'
+import System from './System/System';
+import Page1 from './Pages/Page1/Page1';
+import Page2 from './Pages/Page2/Page2';
+import Page3 from './Pages/Page3/Page3';
+import Page4 from './Pages/Page4/Page4';
+import Page5 from './Pages/Page5/Page5';
 
 
 function App() {
