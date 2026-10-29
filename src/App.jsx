@@ -27,6 +27,7 @@ import Read5 from './Pages/Page5/Subs/Read/Read';
 import Update5 from './Pages/Page5/Subs/Update/Update';
 import Delete5 from './Pages/Page5/Subs/Delete/Delete';
 
+
 function App() {
   const [menus, setMenus] = useState([
     { id: 1, name: '아메리카노', price: 4500 },
@@ -63,12 +64,13 @@ function App() {
       <Route path="/system" element={<System />}>
         <Route index element={<Page1 />}></Route>
         <Route path="page1" element={<Page1 />}></Route>
+       
         <Route path="page2" element={<Page2 />}>
           <Route index element={<Read />}></Route>
-          <Route path="read" element={<Read />}></Route>
-          <Route path="create" element={<Create />}></Route>
-          <Route path="update" element={<Update />}></Route>
-          <Route path="delete" element={<Delete />}></Route>
+          <Route path="read" element={<Read menus={menus}/>}></Route>
+          <Route path="create" element={<Create menus={menus} setMenus={setMenus}/>}></Route>
+          <Route path="update" element={<Update menus={menus} setMenus={setMenus}/>}></Route>
+          <Route path="delete" element={<Delete menus={menus} setMenus={setMenus}/>}></Route>
         </Route>
         <Route path="page3" element={<Page3 />}>
           <Route index element={<Read3 menus={menus} />}></Route>
