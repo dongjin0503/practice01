@@ -66,11 +66,11 @@ function App() {
         <Route path="page1" element={<Page1 />}></Route>
        
         <Route path="page2" element={<Page2 />}>
-          <Route index element={<Read />}></Route>
-          <Route path="read" element={<Read menus={menus}/>}></Route>
-          <Route path="create" element={<Create menus={menus} setMenus={setMenus}/>}></Route>
-          <Route path="update" element={<Update menus={menus} setMenus={setMenus}/>}></Route>
-          <Route path="delete" element={<Delete menus={menus} setMenus={setMenus}/>}></Route>
+          <Route index element={<Read2 />}></Route>
+          <Route path="read" element={<Read2 orders={orders}/>}></Route>
+          <Route path="create" element={<Create2 orders={orders} setOrders={setOrders}/>}></Route>
+          <Route path="update" element={<Update2 orders={orders} setOrders={setOrders}/>}></Route>
+          <Route path="delete" element={<Delete2 orders={orders} setOrders={setOrders}/>}></Route>
         </Route>
         <Route path="page3" element={<Page3 />}>
           <Route index element={<Read3 menus={menus} />}></Route>
@@ -87,11 +87,11 @@ function App() {
           <Route path="delete" element={<Delete4 setStocks={setStocks} />}></Route>
         </Route>
         <Route path="page5" element={<Page5 />}>
-          <Route index element={<Read />}></Route>
-          <Route path="read" element={<Read />}></Route>
-          <Route path="create" element={<Create />}></Route>
-          <Route path="update" element={<Update />}></Route>
-          <Route path="delete" element={<Delete />}></Route>
+          <Route index element={<Read5 staffs={staffs} />}></Route>
+          <Route path="read" element={<Read5 staffs={staffs} />}></Route>
+          <Route path="create" element={<Create5 staffs={staffs} setStaffs={setStaffs} />}></Route>
+          <Route path="update" element={<Update5 staffs={staffs} setStaffs={setStaffs} />}></Route>
+          <Route path="delete" element={<Delete5 staffs={staffs} setStaffs={setStaffs} />}></Route>
         </Route>
       </Route>
     </Routes>

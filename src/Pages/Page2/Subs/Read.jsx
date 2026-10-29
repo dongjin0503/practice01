@@ -1,7 +1,7 @@
-import { useState } from "react";
 
 
-function Read2({ menus }) {
+
+function Read2({ Orders }) {
 
     return (
 
@@ -14,11 +14,11 @@ function Read2({ menus }) {
                 </tr>
             </thead>
             <tbody>
-                {menus.map((menu) => (
-                    <tr key={menu.id}>
-                        <td>{menu.id}</td>
-                        <td>{menu.menu}</td>
-                        <td>{menu.price}</td>
+                {Orders.map((order) => (
+                    <tr key={order.id}>
+                        <td>{order.id}</td>
+                        <td>{order.item}</td>
+                        <td>{order.total}</td>
                     </tr>
                 ))}
 

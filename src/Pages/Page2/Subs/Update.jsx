@@ -1,18 +1,18 @@
 import { useState } from "react"
 
 
-function Update2({ menus, setMenus }) {
+function Update2({ orders, setOrders }) {
 
-    const [menu, setMenu] = useState({
+    const [order, setOrder] = useState({
         id: "",
-        menu: "",
-        price: ""
+        item: "",
+        total: ""
     });
 
     const handleChange = ((e) => {
         const { name, value } = e.target;
 
-        setMenu((prev) => ({
+        setOrder((prev) => ({
             ...prev,
             [name]: value
         }));
@@ -20,21 +20,21 @@ function Update2({ menus, setMenus }) {
 
 
     const handleClick = () => {
-        setMenus(
-            menus.map((seq) =>
-                menu.id == seq.id{
+        setOrders(
+            orders.map((seq) =>
+                order.id == seq.id({
                 ...seq,
-                menu: menu.menu,
-                price: menu.price
-            }
+                item: order.item,
+                total: order.total
+            })
             ))
     }
 
     return (
         <div>
-            <input type="text" name="id" value={menu.id} onChange={handleChange} placeholder="수정할 id입력" />
-            <input type="text" name="menu" value={menu.menu} onChange={handleChange} placeholder="수정할 메뉴 입력" />
-            <input type="text" name="price" value={menu.price} onChange={handleChange} placeholder="수정할 가격 입력" />
+            <input type="text" name="id" value={order.id} onChange={handleChange} placeholder="수정할 id입력" />
+            <input type="text" name="item" value={order.item} onChange={handleChange} placeholder="수정할 메뉴 입력" />
+            <input type="text" name="total" value={order.total} onChange={handleChange} placeholder="수정할 가격 입력" />
             <button onClick={handleClick}>수정</button>
         </div>
 
