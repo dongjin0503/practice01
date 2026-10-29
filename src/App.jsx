@@ -1,13 +1,13 @@
 import { useState } from 'react'
-import { Routes, Route, Link, Outlet, useNavigate } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import System from './System/System';
 import Page1 from './Pages/Page1/Page1';
 
 import Page2 from './Pages/Page2/Page2';
-import Create2 from './Pages/Page2/Subs/Create/Create';
-import Read2 from './Pages/Page2/Subs/Read/Read';
-import Update2 from './Pages/Page2/Subs/Update/Update';
-import Delete2 from './Pages/Page2/Subs/Delete/Delete';
+import Create2 from './Pages/Page2/Subs/Create';
+import Read2 from './Pages/Page2/Subs/Read';
+import Update2 from './Pages/Page2/Subs/Update';
+import Delete2 from './Pages/Page2/Subs/Delete';
 
 import Page3 from './Pages/Page3/Page3';
 import Create3 from './Pages/Page3/Subs/Create/Create';
@@ -22,10 +22,10 @@ import Update4 from './Pages/Page4/Subs/Update/Update';
 import Delete4 from './Pages/Page4/Subs/Delete/Delete';
 
 import Page5 from './Pages/Page5/Page5';
-import Create5 from './Pages/Page5/Subs/Create/Create';
-import Read5 from './Pages/Page5/Subs/Read/Read';
-import Update5 from './Pages/Page5/Subs/Update/Update';
-import Delete5 from './Pages/Page5/Subs/Delete/Delete';
+import Create5 from './Pages/Page5/Subs/Create';
+import Read5 from './Pages/Page5/Subs/Read';
+import Update5 from './Pages/Page5/Subs/Update';
+import Delete5 from './Pages/Page5/Subs/Delete';
 
 
 function App() {
