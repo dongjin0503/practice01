@@ -62,15 +62,15 @@ function App() {
     <Routes>
       <Route path="/" element={<Index />}></Route>
       <Route path="/system" element={<System />}>
-        <Route index element={<Page1 />}></Route>
-        <Route path="page1" element={<Page1 />}></Route>
+        <Route index element={<Page1 menus={menus} orders={orders} stocks={stocks} staffs={staffs} />}></Route>
+        <Route path="page1" element={<Page1 menus={menus} orders={orders} stocks={stocks} staffs={staffs} />}></Route>
        
         <Route path="page2" element={<Page2 />}>
-          <Route index element={<Read />}></Route>
-          <Route path="read" element={<Read menus={menus}/>}></Route>
-          <Route path="create" element={<Create menus={menus} setMenus={setMenus}/>}></Route>
-          <Route path="update" element={<Update menus={menus} setMenus={setMenus}/>}></Route>
-          <Route path="delete" element={<Delete menus={menus} setMenus={setMenus}/>}></Route>
+          <Route index element={<Read2 />}></Route>
+          <Route path="read" element={<Read2 menus={menus}/>}></Route>
+          <Route path="create" element={<Create2 menus={menus} setMenus={setMenus}/>}></Route>
+          <Route path="update" element={<Update2 menus={menus} setMenus={setMenus}/>}></Route>
+          <Route path="delete" element={<Delete2 menus={menus} setMenus={setMenus}/>}></Route>
         </Route>
         <Route path="page3" element={<Page3 />}>
           <Route index element={<Read3 menus={menus} />}></Route>
