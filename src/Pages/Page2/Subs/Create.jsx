@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 import { Routes, Route, Link, Outlet, useNavigate } from 'react-router-dom'
 
-function Create2(order, setOrders) {
+function Create2(orders, setOrders) {
     const [order, setOder] = useState({
         id: "", item: "", total: ""
     });
@@ -23,6 +23,7 @@ function Create2(order, setOrders) {
                 total: order.total
             }
         ]);
+    }
 
 
     return (
@@ -37,5 +38,5 @@ function Create2(order, setOrders) {
         </div>
     )
 }
-}
+
 export default Create2;

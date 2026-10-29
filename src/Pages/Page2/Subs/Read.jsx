@@ -1,7 +1,7 @@
 
 
 
-function Read2({ Orders }) {
+function Read2({ orders }) {
 
     return (
 
@@ -14,7 +14,7 @@ function Read2({ Orders }) {
                 </tr>
             </thead>
             <tbody>
-                {Orders.map((order) => (
+                {orders.map((order) => (
                     <tr key={order.id}>
                         <td>{order.id}</td>
                         <td>{order.item}</td>

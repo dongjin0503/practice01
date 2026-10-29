@@ -1,5 +1,5 @@
 import { Outlet,useNavigate} from 'react-router-dom'
-import styles from 'System.module.css'
+import styles from './System.module.css'
 
 const System = () => {
 

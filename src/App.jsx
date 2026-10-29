@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Link, useNavigate, Outlet } from 'react-router-dom'
+import Index from './Index/Index';
 import System from './System/System';
 import Page1 from './Pages/Page1/Page1';
 
@@ -64,14 +65,13 @@ function App() {
       <Route path="/system" element={<System />}>
         <Route index element={<Page1 menus={menus} orders={orders} stocks={stocks} staffs={staffs} />}></Route>
         <Route path="page1" element={<Page1 menus={menus} orders={orders} stocks={stocks} staffs={staffs} />}></Route>
-       
-        <Route path="page2" element={<Page2 />}>
-          <Route index element={<Read2 />}></Route>
 
-          <Route path="read" element={<Read2 orders={orders}/>}></Route>
-          <Route path="create" element={<Create2 orders={orders} setOrders={setOrders}/>}></Route>
-          <Route path="update" element={<Update2 orders={orders} setOrders={setOrders}/>}></Route>
-          <Route path="delete" element={<Delete2 orders={orders} setOrders={setOrders}/>}></Route>
+        <Route path="page2" element={<Page2 />}>
+          <Route index element={<Read2 orders={orders} />}></Route>
+          <Route path="read" element={<Read2 orders={orders} />}></Route>
+          <Route path="create" element={<Create2 orders={orders} setOrders={setOrders} />}></Route>
+          <Route path="update" element={<Update2 orders={orders} setOrders={setOrders} />}></Route>
+          <Route path="delete" element={<Delete2 orders={orders} setOrders={setOrders} />}></Route>
 
         </Route>
         <Route path="page3" element={<Page3 />}>
