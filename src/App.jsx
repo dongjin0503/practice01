@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import './App.css'
 import { Routes, Route, Link, Outlet, useNavigate } from 'react-router-dom'
 import System from './System/System';
 import Page1 from './Pages/Page1/Page1';
@@ -59,11 +58,11 @@ function App() {
           <Route path="delete" element={<Delete setMenus={setMenus} />}></Route>
         </Route>
         <Route path="page4" element={<Page4 />}>
-          <Route index element={<Read />}></Route>
-          <Route path="read" element={<Read />}></Route>
-          <Route path="create" element={<Create />}></Route>
-          <Route path="update" element={<Update />}></Route>
-          <Route path="delete" element={<Delete />}></Route>
+          <Route index element={<Read stocks={stocks} />}></Route>
+          <Route path="read" element={<Read stocks={stocks} />}></Route>
+          <Route path="create" element={<Create setStocks={setStocks} />}></Route>
+          <Route path="update" element={<Update setStocks={setStocks} />}></Route>
+          <Route path="delete" element={<Delete setStocks={setStocks} />}></Route>
         </Route>
         <Route path="page5" element={<Page5 />}>
           <Route index element={<Read />}></Route>
