@@ -54,11 +54,11 @@ function App() {
           <Route path="delete" element={<Delete />}></Route>
         </Route>
         <Route path="page3" element={<Page3 />}>
-          <Route index element={<Read />}></Route>
-          <Route path="read" element={<Read />}></Route>
-          <Route path="create" element={<Create />}></Route>
-          <Route path="update" element={<Update />}></Route>
-          <Route path="delete" element={<Delete />}></Route>
+          <Route index element={<Read menus={menus} />}></Route>
+          <Route path="read" element={<Read menus={menus} />}></Route>
+          <Route path="create" element={<Create setMenus={setMenus} />}></Route>
+          <Route path="update" element={<Update setMenus={setMenus} />}></Route>
+          <Route path="delete" element={<Delete setMenus={setMenus} />}></Route>
         </Route>
         <Route path="page4" element={<Page4 />}>
           <Route index element={<Read />}></Route>
