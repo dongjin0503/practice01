@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import { Routes, Route, Link, Outlet, useNavigate } from 'react-router-dom'
 
+
 function App() {
   const [menus, setMenus] = useState([
     { id: 1, name: '아메리카노', price: 4500 },
@@ -38,9 +39,10 @@ function App() {
       <Route path="/system" element={<System />}>
         <Route index element={<Page1 />}></Route>
         <Route path="page1" element={<Page1 />}></Route>
+       
         <Route path="page2" element={<Page2 />}>
           <Route index element={<Read />}></Route>
-          <Route path="read" element={<Read />}></Route>
+          <Route path="read" element={<Read menus={menus}/>}></Route>
           <Route path="create" element={<Create />}></Route>
           <Route path="update" element={<Update />}></Route>
           <Route path="delete" element={<Delete />}></Route>
