@@ -51,7 +51,7 @@ function App() {
           <Route path="read" element={<Read menus={menus}/>}></Route>
           <Route path="create" element={<Create menus={menus} setMenus={setMenus}/>}></Route>
           <Route path="update" element={<Update menus={menus} setMenus={setMenus}/>}></Route>
-          <Route path="delete" element={<Delete />}></Route>
+          <Route path="delete" element={<Delete menus={menus} setMenus={setMenus}/>}></Route>
         </Route>
         <Route path="page3" element={<Page3 />}>
           <Route index element={<Read menus={menus} />}></Route>
