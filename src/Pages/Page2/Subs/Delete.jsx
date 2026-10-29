@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 
-function Delete2({ menus, setMenus }) {
+function Delete2({ staffs, setStaffs }) {
 
     const [remove, setRemove] = useState({
         id: ""
@@ -15,8 +15,8 @@ function Delete2({ menus, setMenus }) {
         }))
     })
     const handleClick = () => {
-        setMenus(
-            menus.filter((seq) =>
+        setStaffs(
+            staffs.filter((seq) =>
                 seq.id != remove.id)
         )
     }
