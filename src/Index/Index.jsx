@@ -7,7 +7,7 @@ function App() {
     const navigate = useNavigate();
     
    const handleClick = ()=> {
-      navigate("/Page1");  
+      navigate("/system");  
    }
 
 
