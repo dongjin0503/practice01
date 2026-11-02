@@ -1,5 +1,5 @@
 import { useState } from 'react'
-
+import styles from './Page2.module.css'
 import { Routes, Route, Link, Outlet, useNavigate } from 'react-router-dom'
 
 

@@ -1,7 +1,8 @@
-import './App.css'
+
 import { useNavigate } from "react-router-dom"
 
-function Index() {
+const Index = () => {
+
 
     const navigate = useNavigate();
     

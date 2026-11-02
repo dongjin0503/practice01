@@ -1,3 +1,4 @@
+import styles from './Read.module.css'
 const Read4 = ({ stocks }) => {
 
     return (

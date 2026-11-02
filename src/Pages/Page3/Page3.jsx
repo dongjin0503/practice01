@@ -1,5 +1,5 @@
 import { Link, Outlet } from 'react-router-dom'
-import styles from 'Page3.module.css'
+import styles from './Page3.module.css'
 
 const Page3 = () => {
 

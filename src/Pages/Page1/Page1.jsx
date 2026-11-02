@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import styles from 'Page1.module.css'
+import styles from './Page1.module.css'
 
 const Page1 = ({ menus, stocks, orders, staffs }) => {
 
@@ -16,8 +16,10 @@ const Page1 = ({ menus, stocks, orders, staffs }) => {
                 <h3>대시보드</h3>
                 <table border={1} align='center'>
                     <thead>
+                        <tr>
                         <th>구분</th>
                         <th>수량</th>
+                        </tr>
                     </thead>
                     <tbody>
                         <tr>

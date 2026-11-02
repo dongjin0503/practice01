@@ -1,0 +1,25 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+table {
+    max-width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    overflow-wrap: anywhere;
+}

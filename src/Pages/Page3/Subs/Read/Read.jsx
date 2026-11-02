@@ -1,3 +1,4 @@
+import styles from './Read.module.css'
 const Read3 = ({ menus }) => {
 
     return (
