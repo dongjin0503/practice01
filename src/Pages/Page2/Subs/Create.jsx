@@ -1,10 +1,8 @@
 import { useState } from 'react'
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 194062b905b8a7c63f832b3256bc078ed369c80c
+
 function Create2(orders, setOrders) {
     const [order, setOder] = useState({
         id: "", item: "", total: ""
@@ -26,11 +24,8 @@ function Create2(orders, setOrders) {
                 total: order.total
             }
         ]);
-<<<<<<< HEAD
-    };
-=======
     }
->>>>>>> 194062b905b8a7c63f832b3256bc078ed369c80c
+
 
 
     return (
