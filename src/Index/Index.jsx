@@ -1,8 +1,7 @@
-import { useState } from 'react'
 import './App.css'
-import { useNavigate } from "react-route-dom"
+import { useNavigate } from "react-router-dom"
 
-function App() {
+function Index() {
 
     const navigate = useNavigate();
     
@@ -23,4 +22,4 @@ function App() {
   )
 }
 
-export default App
+export default Index;
