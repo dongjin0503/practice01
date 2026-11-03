@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
-
+import axios from 'axios';
 const Update4 = ({ setStocks }) => {
 
     const navi = useNavigate();
@@ -13,14 +13,10 @@ const Update4 = ({ setStocks }) => {
         setUpTarget(prev => ({ ...prev, [name]: value }));
     }
     const updatebtn = () => {
-        setStocks(prev => (prev.map(e => {
-            if (e.id == upTarget.id) {
-                navi("/system/page4/read");
-                return {...e,name:upTarget.name,stock:upTarget.stock};
-            } else {
-                return e;
-            }
-        })))
+        axios.put("http://localhost/stocks/${upTarget.id}").then((rest)=>{
+            setStocks(rest.data);
+            navi("/system/page4/read")
+        });
     }
     return (
         <div>

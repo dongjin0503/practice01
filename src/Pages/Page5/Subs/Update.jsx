@@ -1,5 +1,5 @@
 import { useState } from "react"
-
+import axios from 'axios'
 
 function Update5({ staffs, setStaffs }) {
 
@@ -20,14 +20,11 @@ function Update5({ staffs, setStaffs }) {
 
 
     const handleClick = () => {
-        setStaff(
-            staffs.map((seq) =>
-                staff.id == seq.id({
-                ...seq,
-                name: staff.name,
-                phone: staff.phone
-            })
-            ))
+        axios.put(`http://localhost/staffs/${staff.id}`, staff).then(()=>{
+            axios.get("http://localhost/staffs").then((rest)=>{
+                setStaff(rest.data);
+            });
+        });
     }
 
     return (

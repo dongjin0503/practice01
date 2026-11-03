@@ -1,23 +1,29 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
+import axios from 'axios';
 
 const Create4 = ({ setStocks }) => {
 
     const navi = useNavigate();
 
-
     const [addTarget, setAddTarget] = useState({
         id: "", name: "", stock: ""
     })
+
     const handleAdd = (e) => {
         const { name, value } = e.target;
         setAddTarget(prev => ({ ...prev, [name]: value }));
     }
+
     const addbtn = () => {
-        setStocks(prev => {
-            navi("/system/page4/read");
-            return ({ ...prev, id: addTarget.id, name: addTarget.name, stock: addTarget.stock });
-        })
+        axios.post("http://localhost/stocks", addTarget)
+            .then(() => {
+                axios.get("http://localhost/stocks")
+                    .then((rest) => {
+                        setStocks(rest.data);
+                        navi("/system/page4/read");
+                    });
+            });
     }
 
     return (
@@ -31,5 +37,7 @@ const Create4 = ({ setStocks }) => {
             </fieldset>
         </div>
     );
+
 }
+
 export default Create4;
