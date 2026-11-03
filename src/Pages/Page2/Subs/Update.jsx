@@ -1,5 +1,6 @@
-import { useState } from "react"
 
+import { useState } from "react"
+import axios from "axios";
 
 function Update2({ orders, setOrders }) {
 
@@ -9,25 +10,21 @@ function Update2({ orders, setOrders }) {
         total: ""
     });
 
-    const handleChange = ((e) => {
+    const handleChange = (e) => {
         const { name, value } = e.target;
 
         setOrder((prev) => ({
             ...prev,
             [name]: value
         }));
-    })
-
+    }
 
     const handleClick = () => {
-        setOrders(
-            orders.map((seq) =>
-                order.id == seq.id({
-                ...seq,
-                item: order.item,
-                total: order.total
-            })
-            ))
+        axios.put(`http://localhost/orders/${order.id}`, order).then(() => {
+            axios.get("http://localhost/orders").then((rest) => {
+                setOrders(rest.data);
+            });
+        });
     }
 
     return (
@@ -37,8 +34,7 @@ function Update2({ orders, setOrders }) {
             <input type="text" name="total" value={order.total} onChange={handleChange} placeholder="수정할 가격 입력" />
             <button onClick={handleClick}>수정</button>
         </div>
-
     )
 }
 
-    export default Update2;
+export default Update2;

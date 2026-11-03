@@ -1,10 +1,10 @@
 import { useState } from 'react'
+import axios from 'axios';
 
-import { Routes, Route, Link, Outlet, useNavigate } from 'react-router-dom'
 
-function Create2(orders, setOrders) {
+function Create2({orders, setOrders}) {
     const [order, setOder] = useState({
-        id: "", item: "", total: ""
+         item: "", total: ""
     });
 
     const handleChange = (e) => {
@@ -15,21 +15,17 @@ function Create2(orders, setOrders) {
     }
 
     const handleClick = () => {
-        setOrders((prev) => [
-            ...prev,
-            {
-                id: order.id,
-                item: order.item,
-                total: order.total
-            }
-        ]);
+        axios.post("http://localhost/orders", order).then(()=>{
+            setOrders(prev=>[...prev, order]);
+        });
     }
+
 
 
     return (
         <div>
             <div>
-                <input name='id' value={order.id} onChange={handleChange} type="text" placeholder='주문번호를 입력하세요' />
+               
                 <input name="item" value={order.item} onChange={handleChange} type='text' placeholder='상품명을 입력하세요' />
                 <input name='total' value={order.total} onChange={handleChange} type="text" placeholder='가격을 입력하세요' />
                 <button onClick={handleClick}>등록</button>

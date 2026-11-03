@@ -1,6 +1,5 @@
 import { useState } from 'react'
-
-
+import axios from 'axios';
 function Create5({ setStaffs}) {
     const [staff, setStaff] = useState({
         id: "", name: "", phone: ""
@@ -14,16 +13,14 @@ function Create5({ setStaffs}) {
     }
 
     const handleClick = () => {
-        setStaffs((prev) => [
-            ...prev,
-            {
-                id: staff.id,
-                name: staff.name,
-                phone: staff.phone
-            }
-        ]);
-
-
+    axios.post('http://localhost/staffs', staff).then(() => {
+        axios.get('http://localhost/staffs').then((rest) => {
+            setStaffs(rest.data);
+        });
+    });
+};
+    
+    
 
     return (
         <div>
@@ -36,6 +33,6 @@ function Create5({ setStaffs}) {
 
         </div>
     )
-}
+
 }
 export default Create5;

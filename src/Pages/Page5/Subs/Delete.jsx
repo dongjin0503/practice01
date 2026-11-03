@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import axios from 'axios';
 
 function Delete5({ setOders }) {
 
@@ -15,10 +15,13 @@ function Delete5({ setOders }) {
         }))
     })
     const handleClick = () => {
-        setOders(
-            orders.filter((seq) =>
-                seq.id != remove.id)
-        )
+        axios.delete(`http://localhost/staffs/${remove.id}`)
+            .then(() => {
+                axios.get('http://localhost/staffs')
+                    .then((rest) => {
+                        setStaffs(rest.data);
+                    });
+            });
     }
 
     return (

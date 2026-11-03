@@ -1,18 +1,18 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
-
+import axios from 'axios';
 
 const Delete4 = ({ setStocks }) => {
 
     const navi = useNavigate();
     const [delTarget, setDelTarget] = useState("");
     const deletebtn = () => {
-        setStocks(prev => {
-            prev.filter(e => {
-                navi("/system/page4/read");
-                return (e.id != delTarget);
-            })
-        })
+        axios.deele('http://localhost/stock/${delTarhet}').then(()=>{
+            axios.get("http://localhost/stocks").then((rest)=>{
+                setStocks(rest.data);
+                navi("system/page4/read");
+            });
+        });
     }
     return (
         <div>
